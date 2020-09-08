@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Pricing example · Bootstrap</title>    
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://bootswatch.com/3/cerulean/bootstrap.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+
+    
+
+    <!-- Favicons -->
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.container {
+  max-width: 960px;
+}
+
+.pricing-header {
+  max-width: 700px;
+}
+
+.card-deck .card {
+  min-width: 220px;
+}
+    </style>
+       
+  </head>
+  <body>
+    
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">  
+  <h1 class="my-0 mr-md-auto font-weight-normal">Alexxis Game</h1>
+  <nav class="my-2 my-md-0 mr-md-3">
+    <a class="p-2 text-dark" href="#">Quienes somos?</a>
+    <a class="p-2 text-dark" href="#">Contactanos</a>
+    <a class="p-2 text-dark" href="#">Blog</a>
+    
+  </nav>
+  <a class="btn btn-outline-primary" href="#">Sign up</a>
+</div>
+
+<!-- Resident -->
+
+<div class="container" id="contenedor">
+    
+</div>
+
+<script type="text/template" id="plantilla-post" >
+  <div>
+    <h2><%= titulo %></h2> 
+    <img class="img-thumbnail" width="310" height="310" src="<%= img %>">       
+    <div>
+     
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h4><%= descripcion %></h4>
+              
+              <p class="card-text"><%= resumen %> </p>
+              <p class="card-text"><%= fechaLanzamiento %> </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h4><%= fechasalida %></h4>
+
+              
+              <p class="card-text"><%= fechaLanzamiento %> </p>
+              
+            </div>
+          </div>
+        </div>
+      </div>   
+    </div>    
+  </div>
+  <ul class="nav justify-content-center">
+    <div class="spinner-grow text-dark" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <li class="nav-item">
+      <a class="nav-link active" href="#">Trailer del juego</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Plataformas</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">extra </a>
+    </li>
+  
+  </ul>
+  
+
+  
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/underscore@1.11.0/underscore-min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script>
+  $(function(){      
+
+      var videojuegos = [
+          { img:"ejercicio/resident7.jpg", titulo:"Resident Evil", descripcion:"Descripcion del juego", resumen:"Resident Evil 7 es el primer título de la saga principal que emplea una perspectiva en primera persona. ... Varios tramos del juego consisten en ser acechados por los miembros de la familia Baker, quienes no pueden ser aniquilados en los primeros combates, solo pueden ser temporalmente incapacitados.", fechasalida:"Fecha de salida" ,fechaLanzamiento:"24/01/2019" },
+          { img:"ejercicio/out.jpg", titulo:"Outlas2", descripcion:"Descripcion del juego", resumen:"  La historia de Outlast II comienza cuando Blake Langermann, un cámara y documentalista al que encarnamos, y su mujer Lynn Langermann, una periodista, se dirigen en helicóptero a una región recóndita en el desierto de Arizona, siguiendo las pistas de una investigación de un extraño suceso. Jane Doe, una joven embarazada de ochos meses, ha aparecido en mitad de la nada en una carretera, para después suicidarse en un hospital, algo que conoceremos más adelante a través de un documento, como la mayoría de los detalles de la historia.", fechasalida:"Fecha de salida", fechaLanzamiento:"24/04/2017" },
+          { img:"ejercicio/dead.jpg", titulo:"Dead By Daylight", descripcion:"Descripcion del juego", resumen:"Resident Evil 7 es el primer título de la saga principal que emplea una perspectiva en primera persona. ... Varios tramos del juego consisten en ser acechados por los miembros de la familia Baker, quienes no pueden ser aniquilados en los primeros combates, solo pueden ser temporalmente incapacitados.", fechasalida:"Fecha de salida" ,fechaLanzamiento:"24/01/2019" }
+
+      ];      
+
+      var plantilla = $("#plantilla-post").text();
+
+    
+          _.each(videojuegos, function(post){
+            var compiled = _.template(plantilla);        
+            $("#contenedor").append(compiled(post));  
+          });
+      
+  });
+</script>
+</body>
+</html>
